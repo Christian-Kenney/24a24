@@ -17,7 +17,7 @@ import movies from '../scripts/movies';
     let randomObject = movies[randomIndex];
     let url = baseUrl + randomObject.ending;
     let randomMovie = await apiCall(url);
-    console.log("RANDOM: ", randomMovie);
+    // console.log("RANDOM: ", randomMovie);
     let movieList = generateList();
     return randomMovie;
 
@@ -47,16 +47,27 @@ import movies from '../scripts/movies';
     for(let i = 15; i <= 23; i++){
       movieListRaw.push(fillList(movies, movieListRaw));
     }
-    console.log("MOVIELISTRAW: ", movieListRaw);
+    // console.log("MOVIELISTRAW: ", movieListRaw);
     
     const apiCalls = movieListRaw.map(movie => apiCall(baseUrl + movie.ending));
     const movieResponses = await Promise.all(apiCalls);
     movieList = movieResponses.map(response => response.results);
     
-    console.log("MOVIELIST: ", movieList);
+    // console.log("MOVIELIST: ", movieList);
     return movieList;
   }
 
+  async function generateListData() {
+    try {
+      const list = await generateList();
+      // console.log("List:", list);
+      return list;
+      // Perform any other actions with the list
+    } catch (error) {
+      console.error(error);
+    }
+    
+  }
   
   function findRandomMovieByYear(movies, year) {
     
@@ -117,4 +128,4 @@ import movies from '../scripts/movies';
   function sortByYearDescending() {
     movies.sort((a, b) => b.year - a.year);
   }
-  export { movies, sortByYearAscending, sortByYearDescending, generateRandomMovie, generateList, apiCall };
+  export { movies, sortByYearAscending, sortByYearDescending, generateRandomMovie, generateList, apiCall, generateListData };

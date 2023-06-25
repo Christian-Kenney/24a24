@@ -89,3 +89,8 @@
     flex-direction: column;
   }
 }
+
+#mainH1{
+  margin-bottom: 0;
+  color: red;
+}
