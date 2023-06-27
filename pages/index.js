@@ -9,7 +9,7 @@ import {generateRandomMovie} from '../scripts/Main';
 import {generateList} from '../scripts/Main';
 import { generateListData } from '../scripts/Main';
 import { Card, Grid, Text } from '@nextui-org/react';
-import Layout from './components/Layout';
+import Layout from './components/LayoutComp';
 import CardList from './components/CardList';
 import CardListMobile from './components/CardListMobile';
 import Container from 'react-bootstrap/Container';

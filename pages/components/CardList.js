@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MovieCard from './MovieCard.js';
+import MovieCard from './MovieCardComp.js';
 
 export default function CardList({ movies }) {
   console.log("CARDLIST:", movies);
