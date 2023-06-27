@@ -20,7 +20,7 @@ export default function MovieCard({ movie }) {
       imageAlt = "imdbPhoto"
     } else{
       imageUrl = movie.primaryImage.url;
-      // imageAlt = movie.primaryimage.caption.plainText;
+      
     }
   }
   const link = "https://www.imdb.com/title/" + movie.id
