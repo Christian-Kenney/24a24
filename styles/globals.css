@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: MADE Sunflower, TS Block, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -13,11 +13,14 @@ a {
 
 * {
   box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%;
+  height: auto; */
 }
 
 h1,
@@ -35,12 +38,244 @@ ul {
 button {
   padding: 0.5rem 1rem;
   font-weight: bold;
+  border-radius: 10px;
 }
 
-h1{
+h1 {
   margin-bottom: 0%;
 }
 
-#mainH1{
-  margin: 0;
+
+
+#headerDiv {
+
+  position: fixed;
+  top: 0;
+  left: 10px;
+  z-index: 1;
+  width: 100%;
+}
+
+#mainH1 {
+  float: left;
+  margin-bottom: 0;
+  margin-top: 50px;
+  text-align: left !important;
+  width: 100%;
+  display: inline-block;
+  font-size: 5em;
+  z-index: 1;
+}
+
+#mainH2 {
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-align: left !important;
+  width: 100%;
+  display: inline-block;
+  font-size: 2em;
+
+}
+
+#mainDiv {
+  width: 100%;
+  background: #fafafa;
+}
+
+#historyBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+
+#historyBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+#history1 {
+  margin-top: 1em;
+  height: 100;
+  width: 45%;
+  position: fixed;
+  right: 1em;
+  font-size: 30px;
+  -webkit-text-size-adjust: 100%;
+}
+
+#history2 {
+  margin-top: 300px;
+  height: 100;
+  width: 45%;
+  position: fixed;
+  left: 1em;
+  font-size: 30px;
+  -webkit-text-size-adjust: 100%;
+}
+
+#headerRow {
+  margin-bottom: 42px;
+}
+
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+
+.column2 {
+
+  float: right;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.a24-container {
+  margin: 0 2%;
+  max-width: fit-content;
+}
+
+.a24-row {
+  margin: 42px 0;
+}
+
+.a24-p {
+  padding-top: 12%;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #212529;
+  font-family: Segoe UI;
+  font-weight: 600;
+}
+
+.a24-p2 {
+  padding-top: 12%;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #212529;
+}
+
+.a24-li {
+  /* font-family: Segoe UI; */
+  font-size: 18px;
+}
+
+.a24-rules {
+  background-color: #505464;
+  color: #E2E2E2;
+  border: black;
+  border-width: 1px;
+  border-radius: 6px;
+  padding: 34px;
+  line-height: 1.8;
+}
+
+.cardImg {
+  object-fit: fill;
+}
+
+.a24-button {
+  /* border-radius: 10px; */
+  background: lightgray;
+}
+
+/* .a24-button:hover {background-color: #3e8e41}
+
+.a24-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px transparent;
+  color: #505464;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+
+.draw-border::before,
+.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+
+.draw-border:hover {
+  color: #505464;
+}
+
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: #505464;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 10px; */
+}
+
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.a24-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+
+.a24-button:focus {
+  outline: 2px dotted #505464;
+}
+
+.movieListCard {
+  filter: none !important;
+  transition: 250ms !important;
+}
+
+.movieListCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+  transition: 250ms !important;
 }

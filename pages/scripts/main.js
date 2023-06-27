@@ -34,6 +34,16 @@ import movies from '../scripts/movies';
 
   }
 
+  // async function randomMovieData() {
+  //   try {
+  //     const movie = await generateRandomMovie();
+
+  //     return movie;
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+
   async function generateList() {
     let movieListRaw = [];
     let movieList = [];
