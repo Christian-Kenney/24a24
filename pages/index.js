@@ -39,7 +39,7 @@ export default function Home() {
     window.addEventListener('resize', handleResize); // Add event listener for window resize
 
     return () => {
-      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+      window.removeEventListener('resize', handleResize); 
     };
   }, []);
 
