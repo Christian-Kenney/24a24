@@ -4,7 +4,7 @@ import Link from 'next/link';
 import imdbPhoto from '../../styles/imdbphoto.jpg';
 import Container from 'react-bootstrap/Container';
 
-export default function MovieCardComp({ movie }) {
+export default function MovieCardMobileComp({ movie }) {
     
 
   if (!movie) {
@@ -41,9 +41,9 @@ export default function MovieCardComp({ movie }) {
         
         <Grid.Container css={{ pl: "$6" }}>
           <Grid xs={12}>
-            <Text h4 css={{ lineHeight: "$xs"  }}>
+            {/* <Text h4 css={{ lineHeight: "$xs"  }}>
               {movie.originalTitleText.text}
-            </Text>
+            </Text> */}
           </Grid>
           <Grid xs={12}>
             <Text css={{ color: "$accents8" }}></Text>
