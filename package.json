@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b main -d build"
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.13",
