@@ -47,8 +47,6 @@ export default function Home() {
     
     const fetchData = async () => {
       const sortedMovies = sortByYearAscending();
-      // const movieListData = generateListData(); tt2044729
-      // setMovieList(movieListData);
       try {
         const movie1Data = await apiCall('https://moviesdatabase.p.rapidapi.com/titles/tt6710474');
         const movie2Data = await apiCall('https://moviesdatabase.p.rapidapi.com/titles/tt2101441');
