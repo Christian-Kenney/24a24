@@ -7,6 +7,9 @@ import Container from 'react-bootstrap/Container';
 export default function MovieCard({ movie }) {
     
 
+  if (!movie) {
+    return null; // or any fallback UI or loading state if desired
+  }
   let imageUrl = "";
   let imageAlt = "";
   if( !movie.id) {
@@ -23,6 +26,7 @@ export default function MovieCard({ movie }) {
   const link = "https://www.imdb.com/title/" + movie.id
 
   console.log("card movie: ", movie);
+  
   return (
     <>
     <Card css={{ p: "$6", mw: "400px" }} className='movieListCard'>

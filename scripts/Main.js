@@ -1,5 +1,5 @@
 import axios from 'axios';
-import movies from '../scripts/movies';
+import movies from './Movies';
 
 
   let baseUrl = 'https://moviesdatabase.p.rapidapi.com/titles/';
